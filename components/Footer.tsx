@@ -7,7 +7,7 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ onShowDevs }) => {
   const [logoError, setLogoError] = useState(false);
-  const logoUrl = '/images/logo.png';
+  const logoUrl = '/images/yct_logo.png';
 
   return (
     <footer className="bg-[#444444] text-white pt-10">
