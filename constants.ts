@@ -1,7 +1,11 @@
 
 import { Building } from './types';
 
-export const BUILDINGS: Building[] = [
+export interface BuildingWithCategory extends Building {
+  category: 'department' | 'office' | 'service' | 'other';
+}
+
+export const BUILDINGS: BuildingWithCategory[] = [
   {
     id: 'b1',
     name: 'แผนกวิชาช่างยนต์',
@@ -9,7 +13,8 @@ export const BUILDINGS: Building[] = [
     image: '/images/b1.jpg',
     rooms: ['โรงงานช่างยนต์ 1', 'ห้องทฤษฎีเครื่องยนต์', 'ห้องปฏิบัติการฉีดเชื้อเพลิง', 'ห้องพักครูช่างยนต์'],
     department: 'เครื่องกล',
-    floors: 2
+    floors: 2,
+    category: 'department'
   },
   {
     id: 'b2',
@@ -18,7 +23,8 @@ export const BUILDINGS: Building[] = [
     image: '/images/b2.jpg',
     rooms: ['ห้องปฏิบัติการดิจิทัล', 'ห้องซ่อมอุปกรณ์อิเล็กฯ', 'ห้องวิทยุสื่อสาร', 'ห้องเรียนทฤษฎี'],
     department: 'ไฟฟ้าและอิเล็กทรอนิกส์',
-    floors: 3
+    floors: 3,
+    category: 'department'
   },
   {
     id: 'b3',
@@ -27,7 +33,8 @@ export const BUILDINGS: Building[] = [
     image: '/images/b3.jpg',
     rooms: ['ห้อง Sound Lab', 'ห้องเรียนภาษาอังกฤษ 1', 'ห้องเรียนภาษาจีน', 'ศูนย์วัฒนธรรมทางภาษา'],
     department: 'สามัญสัมพันธ์',
-    floors: 2
+    floors: 2,
+    category: 'department'
   },
   {
     id: 'b4',
@@ -36,7 +43,8 @@ export const BUILDINGS: Building[] = [
     image: '/images/b4.jpg',
     rooms: ['โรงงานติดตั้งไฟฟ้า', 'ห้องปฏิบัติการเครื่องกลไฟฟ้า', 'ห้องควบคุม PLC', 'ห้องพักครูช่างไฟฟ้า'],
     department: 'ไฟฟ้าและอิเล็กทรอนิกส์',
-    floors: 3
+    floors: 3,
+    category: 'department'
   },
   {
     id: 'b5',
@@ -45,7 +53,8 @@ export const BUILDINGS: Building[] = [
     image: '/images/b5.jpg',
     rooms: ['ห้องปฏิบัติการคอมพิวเตอร์ 1', 'ห้องธุรกิจออนไลน์', 'ห้องสัมมนาธุรกิจดิจิทัล'],
     department: 'บริหารธุรกิจ',
-    floors: 3
+    floors: 3,
+    category: 'department'
   },
   {
     id: 'b6',
@@ -54,7 +63,8 @@ export const BUILDINGS: Building[] = [
     image: '/images/b6.jpg',
     rooms: ['ห้องบัญชีคอมพิวเตอร์', 'ห้องปฏิบัติการจำลองการบัญชี', 'ห้องพักครูการบัญชี'],
     department: 'บริหารธุรกิจ',
-    floors: 3
+    floors: 3,
+    category: 'department'
   },
   {
     id: 'b7',
@@ -63,7 +73,8 @@ export const BUILDINGS: Building[] = [
     image: '/images/b7.jpg',
     rooms: ['ห้องจำลองศูนย์การค้า', 'ห้องจัดการธุรกิจ', 'ห้องประชุมกลุ่มย่อย'],
     department: 'บริหารธุรกิจ',
-    floors: 2
+    floors: 2,
+    category: 'department'
   },
   {
     id: 'b8',
@@ -72,7 +83,8 @@ export const BUILDINGS: Building[] = [
     image: '/images/b8.jpg',
     rooms: ['ห้อง Hardware Lab', 'ห้องปฏิบัติการ Network', 'ห้องซ่อมบำรุงคอมพิวเตอร์'],
     department: 'เทคโนโลยีคอมพิวเตอร์',
-    floors: 3
+    floors: 3,
+    category: 'department'
   },
   {
     id: 'b9',
@@ -81,7 +93,8 @@ export const BUILDINGS: Building[] = [
     image: '/images/b9.jpg',
     rooms: ['โรงงานพื้นฐาน 1', 'ห้องเขียนแบบเทคนิค', 'ห้องเครื่องมือส่วนกลาง'],
     department: 'เทคนิคพื้นฐาน',
-    floors: 2
+    floors: 2,
+    category: 'department'
   },
   {
     id: 'b10',
@@ -90,7 +103,8 @@ export const BUILDINGS: Building[] = [
     image: '/images/b10.jpg',
     rooms: ['ห้องปฏิบัติการอาหารร้อน', 'ห้องเบเกอรี่', 'ห้องจัดแสดงศิลปะการจัดโต๊ะ'],
     department: 'คหกรรม',
-    floors: 2
+    floors: 2,
+    category: 'department'
   },
   {
     id: 'b11',
@@ -99,7 +113,8 @@ export const BUILDINGS: Building[] = [
     image: '/images/b11.jpg',
     rooms: ['โรงปฏิบัติงานเชื่อมไฟฟ้า', 'ห้องทดสอบแบบไม่ทำลาย (NDT)', 'โรงเก็บวัสดุ'],
     department: 'ช่างเชื่อมโลหะ',
-    floors: 1
+    floors: 1,
+    category: 'department'
   },
   {
     id: 'b12',
@@ -108,7 +123,8 @@ export const BUILDINGS: Building[] = [
     image: '/images/b12.jpg',
     rooms: ['โรงงานเครื่องจักรกล', 'ห้องปฏิบัติการ CNC', 'ห้องมาตรวิทยา'],
     department: 'เครื่องกล',
-    floors: 2
+    floors: 2,
+    category: 'department'
   },
   {
     id: 'b13',
@@ -117,7 +133,8 @@ export const BUILDINGS: Building[] = [
     image: '/images/b13.jpg',
     rooms: ['ห้องสตูดิโอออกแบบ', 'ห้องปฏิบัติการ CAD', 'ห้องทำหุ่นจำลอง'],
     department: 'ช่างก่อสร้างและสถาปัตย์',
-    floors: 3
+    floors: 3,
+    category: 'department'
   },
   {
     id: 'b14',
@@ -126,7 +143,8 @@ export const BUILDINGS: Building[] = [
     image: '/images/b14.jpg',
     rooms: ['ห้องปฏิบัติการคอนกรีต', 'ห้องเก็บกล้องสำรวจ', 'โรงงานงานไม้ก่อสร้าง'],
     department: 'ช่างก่อสร้างและสถาปัตย์',
-    floors: 2
+    floors: 2,
+    category: 'department'
   },
   {
     id: 'b15',
@@ -135,7 +153,8 @@ export const BUILDINGS: Building[] = [
     image: '/images/b15.jpg',
     rooms: ['ห้องปฏิบัติการวิทย์ 1', 'ห้องคณิตศาสตร์', 'ห้องพักครูหมวดสามัญ'],
     department: 'สามัญสัมพันธ์',
-    floors: 4
+    floors: 4,
+    category: 'department'
   },
   {
     id: 'b16',
@@ -144,7 +163,8 @@ export const BUILDINGS: Building[] = [
     image: '/images/b16.jpg',
     rooms: ['ห้องผู้อำนวยการ', 'ห้องประชาสัมพันธ์', 'งานทะเบียน', 'งานการเงิน'],
     department: 'ส่วนกลาง',
-    floors: 3
+    floors: 3,
+    category: 'office'
   },
   {
     id: 'b17',
@@ -153,7 +173,8 @@ export const BUILDINGS: Building[] = [
     image: '/images/b17.jpg',
     rooms: ['ร้านค้าสวัสดิการ', 'พื้นที่รับประทานอาหาร', 'ร้านน้ำดื่ม'],
     department: 'บริการส่วนกลาง',
-    floors: 1
+    floors: 1,
+    category: 'service'
   },
   {
     id: 'b18',
@@ -162,7 +183,8 @@ export const BUILDINGS: Building[] = [
     image: '/images/b18.jpg',
     rooms: ['ห้องอ่านหนังสือ', 'ห้องสืบค้นอินเทอร์เน็ต', 'ห้องประชุมอเนกประสงค์'],
     department: 'ส่วนกลาง',
-    floors: 2
+    floors: 2,
+    category: 'service'
   },
   {
     id: 'b19',
@@ -171,7 +193,8 @@ export const BUILDINGS: Building[] = [
     image: '/images/b19.jpg',
     rooms: ['ลานกิจกรรมหลัก', 'เวทีกลาง'],
     department: 'ส่วนกลาง',
-    floors: 1
+    floors: 1,
+    category: 'other'
   },
   {
     id: 'b20',
@@ -180,7 +203,8 @@ export const BUILDINGS: Building[] = [
     image: '/images/b20.jpg',
     rooms: ['ห้องหัวหน้างานปกครอง', 'ห้องรับรายงานตัว', 'ฝ่ายกิจกรรมนักศึกษา'],
     department: 'งานกิจการนักศึกษา',
-    floors: 1
+    floors: 1,
+    category: 'office'
   },
   {
     id: 'b21',
@@ -189,7 +213,8 @@ export const BUILDINGS: Building[] = [
     image: '/images/b21.jpg',
     rooms: ['ห้องเก็บอุปกรณ์กีฬา', 'ห้องพักครูพละ', 'ลานฝึกซ้อมในร่ม'],
     department: 'สามัญสัมพันธ์',
-    floors: 1
+    floors: 1,
+    category: 'other'
   },
   {
     id: 'b22',
@@ -198,7 +223,8 @@ export const BUILDINGS: Building[] = [
     image: '/images/b22.jpg',
     rooms: ['ร้านสหกรณ์วิทยาลัย', 'งานพัสดุการค้า', 'สำนักงานงานการค้า'],
     department: 'บริหารธุรกิจ / ส่วนกลาง',
-    floors: 1
+    floors: 1,
+    category: 'office'
   }
 ];
 
