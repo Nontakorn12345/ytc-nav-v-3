@@ -18,14 +18,17 @@ const Dashboard: React.FC<DashboardProps> = ({ onStartNav }) => {
               <div className="inline-block px-3 py-1 bg-blue-500/30 backdrop-blur-md rounded-lg text-[10px] font-black uppercase tracking-[0.2em] border border-white/10">
                 Smart Campus Navigation
               </div>
+
               <h2 className="text-3xl md:text-6xl font-black leading-[1.1] tracking-tighter">
                 ระบบนำทาง <br/> 
                 อัจฉริยะ YTC
               </h2>
+
               <p className="text-xs md:text-lg text-white/60 font-medium leading-relaxed max-w-sm">
                 ค้นหาอาคารและแผนกวิชาต่างๆ ภายในวิทยาลัยเทคนิคยโสธร 
                 ให้เราช่วยพาคุณไปยังจุดหมายที่ต้องการ
               </p>
+
               <div className="pt-2">
                  <button 
                    onClick={onStartNav}
@@ -53,6 +56,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onStartNav }) => {
             <p className="text-slate-400 text-[11px] font-bold mt-2">ข้อมูลพิกัดอาคารล่าสุด</p>
           </div>
         </div>
+
         <div className="bg-white p-6 md:p-8 rounded-[2rem] border border-slate-100 shadow-sm flex flex-col items-center md:items-start text-center md:text-left space-y-4">
           <div className="w-12 h-12 bg-[#059669] rounded-2xl flex items-center justify-center text-white text-xl shadow-lg">
             <i className="fas fa-route"></i>
@@ -62,6 +66,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onStartNav }) => {
             <p className="text-slate-400 text-[11px] font-bold mt-2">คำนวณเส้นทางเดินที่สะดวก</p>
           </div>
         </div>
+
         <div className="bg-white p-6 md:p-8 rounded-[2rem] border border-slate-100 shadow-sm flex flex-col items-center md:items-start text-center md:text-left space-y-4">
           <div className="w-12 h-12 bg-[#d97706] rounded-2xl flex items-center justify-center text-white text-xl shadow-lg">
             <i className="fas fa-database"></i>
@@ -86,7 +91,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onStartNav }) => {
         </div>
 
         <div className="bg-white rounded-[2.5rem] md:rounded-[3.5rem] p-4 md:p-10 border border-slate-100 flex flex-col lg:flex-row gap-8 items-stretch shadow-[0_20px_50px_rgba(0,0,0,0.03)] relative overflow-hidden">
-           {/* รูปภาพข่าวด้านซ้าย */}
+           
            <div className="w-full lg:w-[45%] rounded-[2rem] overflow-hidden shadow-lg relative min-h-[300px] md:min-h-[450px]">
               <img 
                 src="/images/news-vishnu.png" 
@@ -103,10 +108,8 @@ const Dashboard: React.FC<DashboardProps> = ({ onStartNav }) => {
               </div>
            </div>
            
-           {/* เนื้อหาข่าวทางขวา */}
            <div className="w-full lg:w-[55%] flex flex-col justify-between py-2">
               <div className="space-y-6">
-                 {/* Badges วันที่และเวลา */}
                  <div className="flex flex-wrap gap-4">
                     <div className="flex items-center gap-3 bg-blue-50 px-4 py-2 rounded-xl">
                        <div className="w-8 h-8 bg-blue-600 text-white rounded-lg flex items-center justify-center text-sm shadow-md">
@@ -128,7 +131,6 @@ const Dashboard: React.FC<DashboardProps> = ({ onStartNav }) => {
                     </div>
                  </div>
 
-                 {/* หัวข้อและรายละเอียด */}
                  <div className="space-y-3">
                     <h4 className="text-2xl md:text-4xl font-black text-slate-900 leading-[1.1] tracking-tight">ร่วมสมทบทุนสร้าง "องค์พระวิษณุกรรม"</h4>
                     <p className="text-slate-500 text-xs md:text-base font-medium leading-relaxed">
@@ -136,7 +138,6 @@ const Dashboard: React.FC<DashboardProps> = ({ onStartNav }) => {
                     </p>
                  </div>
                  
-                 {/* ข้อมูลการบริจาค */}
                  <div className="bg-slate-50/80 p-6 rounded-[1.8rem] border border-slate-100 relative group">
                     <div className="absolute top-4 right-4 px-3 py-1 bg-[#d1fae5] text-[#065f46] text-[8px] font-black rounded-full uppercase tracking-widest border border-[#059669]/20">
                        E-DONATION (ลดหย่อนภาษีได้)
@@ -153,13 +154,12 @@ const Dashboard: React.FC<DashboardProps> = ({ onStartNav }) => {
                  </div>
               </div>
 
-              {/* ปุ่ม Action - เปลี่ยนเป็นข้อมูลเพิ่มเติมและใส่ลิงก์ */}
               <div className="pt-8 flex gap-3">
                  <a 
                    href="https://web.facebook.com/photo/?fbid=122301867806067446&set=a.122117044334067446"
                    target="_blank"
                    rel="noopener noreferrer"
-                   className="flex-1 bg-blue-600 text-white py-4 md:py-5 rounded-2xl font-black text-sm md:text-lg shadow-xl shadow-blue-200 flex items-center justify-center gap-3 hover:bg-blue-700 transition-all active:scale-95"
+                   className="flex-1 bg-blue-600 text-white py-4 md:py-5 rounded-2xl font-black text-sm md:text-lg shadow-xl shadow-blue-200 flex items-center justify-center gap-3 hover:bg-blue-700 transition-all active:scale-95 text-center"
                  >
                     <i className="fas fa-circle-info"></i> ข้อมูลเพิ่มเติม
                  </a>
